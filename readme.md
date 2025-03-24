@@ -9,9 +9,9 @@ sudo systemctl start mariadb
 
 Step 3: Upload Video Files
 
-    Create a Directory for Video Files:
+Create a Directory for Video Files:
 
-    bash
+bash
 ```
 sudo mkdir /var/www/html/videos
 sudo chown -R www-data:www-data /var/www/html/videos
@@ -26,9 +26,9 @@ sql
 ```
 Step 4: Configure Apache to Serve Video Files
 
-    Enable Necessary Modules (if not already enabled):
+Enable Necessary Modules (if not already enabled):
 
-    bash
+bash
 ```
 sudo a2enmod mime
 sudo a2enmod headers
@@ -53,12 +53,6 @@ apache
 ```
 Step 5: Create a Simple PHP Interface
 
-    Install PHP (if not installed):
-
-    bash
-```
-sudo apt install php libapache2-mod-php php-mysql
-```
 Create a PHP Script to Fetch Video Data: Create a file, e.g., index.php, in /var/www/html:
 
 php
@@ -85,11 +79,11 @@ php
 ```
 Step 6: Test Your Setup
 
-    Restart Apache:
+Restart Apache:
 
-    bash
+bash
 ```
     sudo systemctl restart apache2
 ```
-    Access Your Application: Open your web browser and go to http://your_server_ip/index.php to see your video list.
+Open your web browser and go to http://your_server_ip/index.php to see your video list.
 
